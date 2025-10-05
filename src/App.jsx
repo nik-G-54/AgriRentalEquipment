@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Navbar from './content/Navbar'
-import Herosection from './content/herosection'
+import Herosection from './content/Herosection'
 import Section1 from './content/Section1'
 import Footer from './content/Footer'
 import Home from './content/Home'

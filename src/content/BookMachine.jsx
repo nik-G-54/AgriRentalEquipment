@@ -81,7 +81,9 @@ const BookMachine = () => {
   }
 
   return (
+    <> <hr />
     <Container className="mt-4">
+     
       {/* Alert Component */}
       {alert.show && (
         <Alert variant={alert.variant} dismissible onClose={() => setAlert({ show: false, message: '', variant: 'success' })}>
@@ -165,8 +167,9 @@ const BookMachine = () => {
           Refresh List
         </Button>
       </div>
+      
     </Container>
-  );
+ </> );
 };
 
 export default BookMachine;

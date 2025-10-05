@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 
 const Herosection = () => {
   return (
+    <>
+    <hr />
     <div className="min-h-screen relative">
       {/* Background Image */}
       <div 
@@ -86,7 +88,7 @@ const Herosection = () => {
         </div>
       </div>
     </div>
-  );
+</>  );
 };
 
 export default Herosection;
