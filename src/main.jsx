@@ -11,7 +11,7 @@ createRoot(document.getElementById('root')).render(
     domain="dev-4f6uxm536dy7amlo.us.auth0.com"
     clientId="rlAY2FFFix4leSCFGa5MPVkcSita3XQI"
     authorizationParams={{
-      redirect_uri: window.location.origin
+      redirect_uri: window.location.origin,
     }}
   >
     <BrowserRouter>

@@ -4,30 +4,16 @@ import { NavLink } from 'react-router-dom';
 
 
 const Navbar = () => {
-  const { loginWithRedirect } = useAuth0();
+  const { loginWithRedirect, } = useAuth0();
     const { logout } = useAuth0();
      const { user, isAuthenticated } = useAuth0();
      const [isOpen, setIsOpen] = useState(false)
   return (
     <div className='w-full  flex justify-between mt-1 sticky top-0 bg-white z-50 h-10 p-2 pb-1 ' >
       <div className='text-2xl'>AgriRent</div>
-      <button className='md:hidden' aria-label='Toggle navigation' onClick={() => setIsOpen(!isOpen)}>
-        ☰
-      </button>
-      <ul className={`font-medium md:flex ${isOpen ? 'block' : 'hidden'}`}>
-        <li className='mx-4'><NavLink className={({isActive})=> isActive ? "text-blue-700 font-bold": ""} to="/">Home</NavLink>
-        <div></div>
-        </li>
-        <li className="mx-4"><NavLink className={({isActive})=> isActive ? "text-blue-700 font-bold": ""} to="/Contact">Contact</NavLink>
-        <div></div>
-        </li>
-        <li className='mx-4 text-green-700'><NavLink className= "text-green-700 font-bold" to="/Machine"> List your Machines</NavLink>
-        <div></div>
-        </li>
-        <li className='mx-4 text-green-700'><NavLink className= "text-green-700 font-bold" to="/BookMachine"> Book on Rent</NavLink>
-        <div></div>
-        </li>
-      </ul>
+    
+
+     
       <div className=' flex gap-2'>
         <div className=''>
         <div className='mt-1.5 underline text-green-400 italic ... font-bold  '>{isAuthenticated && <p>{user.name}</p>}</div>
@@ -41,6 +27,26 @@ const Navbar = () => {
   
         {/* <button className='rounded-xl p-1 mx-1 hover:scale-50 hover:bg-green-300   transition-all duration-700'>Register</button> */}
       </div>
+
+ <button className='md:hidden text-green-800' aria-label='Toggle navigation' onClick={() => setIsOpen(!isOpen)}>
+        ☰
+      </button>
+      <ul className={`font-medium md:flex ${isOpen ? 'block' : 'hidden'}`}>
+        <li className='mx-4'><NavLink className={({isActive})=> isActive ? "text-green-700 font-bold": ""} to="/">Home</NavLink>
+        <div></div>
+        </li>
+        <li className="mx-4"><NavLink className={({isActive})=> isActive ? "text-green-700 font-bold": ""} to="/Contact">Contact</NavLink>
+        <div></div>
+        </li>
+        <li className='mx-4 text-green-700'><NavLink className= "text-green-700 font-bold" to="/Machine"> List your Machines</NavLink>
+        <div></div>
+        </li>
+        <li className='mx-4 text-green-700'><NavLink className= "text-green-700 font-bold" to="/BookMachine"> Book on Rent</NavLink>
+        <div></div>
+        </li>
+      </ul>
+
+
     </div>
   )
 }
